@@ -10,6 +10,27 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+        <div class="container-fluid">
+           <a href="#" class="navbar-brand">ZALEGO</a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
+               <span class="navbar-toggler-icon"></span>
+           </button>    
+    
+    
+           <div class="collapse navbar-collapse" id="navbardisplaynavigations">
+              <div class="navbar-nav">
+                      <img src="images/zalego.png" alt="zalego" height="30" width="30" class="rounded-circle">
+                              <a href="#" class="navbar-trigger"><span></span></a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="login.html" class="nav-link">Login</a>
+              </div>
+            </div>
+         </div>
+    
+      </nav> 
+            <!-- end navigation bar here -->
 
     <div class="header">
         <img src="images/zalego.png" alt="zalego" height="50" width="50" class="rounded-circle">
@@ -113,8 +134,9 @@
     </div>
     
     
-
-    <script src="bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
     <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
 </body>
 </html>

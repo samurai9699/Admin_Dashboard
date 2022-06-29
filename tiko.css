@@ -1,0 +1,25 @@
+.navbar{
+    margin: 0px;
+    padding: 0px;
+}
+form{
+    padding-top: 0;
+    width: 850px;
+    padding: 20px;
+    margin: 8% auto 0;
+    border-style: groove;
+    border-radius: 20px;
+    background-color: white;
+}
+.paragraph{
+    text-align: center;
+    word-spacing: 0px;
+}
+label{
+    font-weight:bold;
+
+}
+span{
+    margin-left: 0;
+    margin-right: 0;
+}
