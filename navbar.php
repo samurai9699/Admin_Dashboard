@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+<nav class="navbar navbar-expand-lg bg-danger fixed-top shadow">
     <div class="container-fluid">
        <a href="#" class="navbar-brand">Zalego</a>
        <img src="images/zalego.png" alt="zalego" height="50" width="50" class="rounded-circle">

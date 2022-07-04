@@ -1,3 +1,19 @@
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$database="zalego";
+
+$conn=mysqli_connect($server,$username,$password,$database);
+
+$sql = mysqli_query($conn,"SELECT * FROM enrollment");
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,40 +93,46 @@
       </div>
    
              <div class="card-body">
-                    <table class="table table-stripped table-hover table-responsive">
+                    <table class="table table-striped table-hover table-responsive">
                         <thead>
-                            <tr>
+                        <tr>
                              <th>ID</th>
-                             <th>Fullname:</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Course</th>
-                           <th>Gender</th>
-                           <th>Enrolled on</th>
-                           <th>Action</th>
+                                  <th>Fullname:</th>
+                                     <th>Phone</th>
+                                     <th>Email</th>
+                                     <th>Course</th>
+                                       <th>Gender</th>
+                                          <th>Enrolled on</th>
+                                        <th>Action</th>
                     </tr>
               </thead>
            <tbody>  
+            <?php while ($fetchenrollmentrecords= mysqli_fetch_array($sql)) {?>
                 <tr>
-                    <td>1</td>
-                    <td>Samurai Muriithi</td>
-                    <td>0838383829</td>
-                    <td>samurai@gmail.com</td>
-                    <td>software development</td>
-                    <td>male</td>
-                    <td>May 9th 2022</td>
+                    <td><?php echo $fetchenrollmentrecords ['no']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['fullname']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['phonenumber']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['email']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['gender']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['course']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['created_at']?></td>
                     <td>
-                      <a href =# class="btn btn-primary btn-sm">
-                        <i class="fa fa-edit"></i>
-                      </a>
-                      <a href =# class="btn btn-info btn-sm">
-                        <i class="fa fa-eye"></i>
-                      </a>
-                      <a href =# class="btn btn-danger btn-sm">
-                        <i class="fa fa-trash"></i>
-                      </a>
+                             <a href =# class="btn btn-primary btn-sm">
+                                <i class="fa fa-edit"></i>
+                               </a>
+                             <a href =# class="btn btn-info btn-sm">
+                               <i class="fa fa-eye"></i>
+                              </a>
+                               <a href =# class="btn btn-danger btn-sm">
+                             <i class="fa fa-trash"></i>
+                             </a>
                     </td>
+                
+                
                 </tr>
+            <?php }?>
+                
+
             </table>
           
             <div class="card-footer">
