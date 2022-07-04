@@ -1,6 +1,6 @@
  <?php
     require_once('processregister.php')
-?>
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,28 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="tiko.css">
-    <a href="index.html"></a>
     <title>Register</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
-        <div class="container-fluid">
-           <a href="#" class="navbar-brand">ZALEGO</a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
-               <span class="navbar-toggler-icon"></span>
-           </button>    
-    
-    
-           <div class="collapse navbar-collapse" id="navbardisplaynavigations">
-              <div class="navbar-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="register.html" class="nav-link active">Register</a>
-                <a href="login.html" class="nav-link">Login</a>
-              </div>
-            </div>
-         </div>
-    
-      </nav> 
+         <!-- start navigation bar here -->
+         <?php include("navbar.php")?>
             <!-- end navigation bar here -->
        <br>     
 
@@ -64,7 +47,7 @@
             </div>
         </div>
         <p>
-            Have account? Sign in <a href="https://zalegoacademy.ac.ke/" target="_blank">Here</a>
+            Have account? Sign in <a href="login.html">Here</a>
         </p>
      </form>  
 

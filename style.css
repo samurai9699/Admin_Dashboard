@@ -5,28 +5,23 @@ body{
     margin: 0;
     padding: 0;
 }
+ 
 .header{
     position:absolute;
     width: 100%;
     background-color: #FF4500;
     height: 50px;
-    z-index: 6;
+    z-index: 5;
 }
 .sidebar{
     position: absolute;
     width: 100%;
-    background-color:#ff0000;
+    background-color:#7cf242;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;
 }
-nav{
-    position:absolute;
-    width: 100%;
-    background-color: #FF4500;
-    height: 50px;
-    z-index: 6;
-}
+
 .sidebar ul{
     list-style: none;
     margin: 0;
@@ -132,5 +127,26 @@ nav{
     }
     .main-content{
         margin-left: 200px;
+        margin-right: 200px;
     }
+}
+table{
+    width: 750px;
+    border-spacing: 20px;
+}
+th, caption{
+    text-align: left;
+}
+table,th,td{
+    border:2px solid #000;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 25px;
+}
+tr:nth-child(even){
+    background-color: #f7f7f7;
+}
+tr:nth-child(odd){
+    background-color: #fefefe;
 }

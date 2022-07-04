@@ -10,26 +10,8 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
-        <div class="container-fluid">
-           <a href="#" class="navbar-brand">ZALEGO</a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
-               <span class="navbar-toggler-icon"></span>
-           </button>    
-    
-    
-           <div class="collapse navbar-collapse" id="navbardisplaynavigations">
-              <div class="navbar-nav">
-                      <img src="images/zalego.png" alt="zalego" height="30" width="30" class="rounded-circle">
-                              <a href="#" class="navbar-trigger"><span></span></a>
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="register.html" class="nav-link">Register</a>
-                <a href="login.html" class="nav-link">Login</a>
-              </div>
-            </div>
-         </div>
-    
-      </nav> 
+            <!-- start navigation bar here -->
+            <?php include("navbar.php")?>
             <!-- end navigation bar here -->
 
     <div class="header">
@@ -37,11 +19,12 @@
         <a href="#" class="navbar-trigger"><span></span></a>
     </div>
 
-    <div class="sidebar">
+<div class="sidebar">
         <nav>
+    
             <ul>
                 <li>
-                    <a href="">
+                    <a href="student.php" class="nav-link">
                         <span><i class="fa fa-group"></i></span>
                         <span>Students</span>
                     </a>
@@ -61,11 +44,9 @@
             </ul>
         </nav>
 
-    </div>
+</div>
 
-    <div class="main-content">
-
-    
+ <div class="main-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -100,7 +81,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="card-hearder bg-dark text-white text-center">
-                    <span>Compuses</span>
+                    <span>Campuses</span>
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-graduation-cap fa-3x"></i></span>
