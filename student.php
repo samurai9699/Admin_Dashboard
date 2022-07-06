@@ -1,10 +1,5 @@
 <?php
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
-
-$conn=mysqli_connect($server,$username,$password,$database);
+ require_once("logics/dbconnection.php");
 
 $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
@@ -16,19 +11,10 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Student</title>
-
-</head>
+<?php require_once('includes/headers.php')?>
 <body>
     <!-- start navigation bar here -->
-         <?php include("navbar.php")?>
+         <?php include("includes/navbar.php")?>
     <!-- end navigation bar here -->
 
     <div class="header">
@@ -37,29 +23,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
     </div>
 
     <div class="sidebar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="student.php" class="nav-link active">
-                        <span><i class="fa fa-group"></i></span>
-                        <span>Students</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-folder-open"></i></span>
-                        <span>Courses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-graduation-cap"></i></span>
-                        <span>Campus</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+    <?php include("includes/sidebar.php")?>
     </div>
 
 

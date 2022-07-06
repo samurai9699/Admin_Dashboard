@@ -13,7 +13,7 @@
 </head>
 <body>
          <!-- start navigation bar here -->
-         <?php include("navbar.php")?>
+         <?php include("includes/navbar.php")?>
             <!-- end navigation bar here -->
        <br>     
 

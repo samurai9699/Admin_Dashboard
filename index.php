@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
+ <?php require_once('includes/headers.php')?>
 <body>
             <!-- start navigation bar here -->
-            <?php include("navbar.php")?>
+            <?php include("includes/navbar.php")?>
             <!-- end navigation bar here -->
 
     <div class="header">
@@ -20,33 +12,11 @@
     </div>
 
 <div class="sidebar">
-        <nav>
-    
-            <ul>
-                <li>
-                    <a href="student.php" class="nav-link">
-                        <span><i class="fa fa-group"></i></span>
-                        <span>Students</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-folder-open"></i></span>
-                        <span>Courses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-graduation-cap"></i></span>
-                        <span>Campus</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <?php include("includes/sidebar.php")?>
 
 </div>
 
- <div class="main-content">
+<div class="main-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -98,9 +68,9 @@
                     <span class="float-end">00</span>
                 </div>
                 <div class="card-footer"></div>
-            </div>
-        </div>
-        <br>
+               </div>
+              </div>
+            <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-hearder bg-dark text-white text-center">
@@ -112,7 +82,9 @@
             </div>
         </div>
         </div>
-    </div>
+</div>
+
+
     
     
     <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
