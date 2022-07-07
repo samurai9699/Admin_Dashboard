@@ -131,6 +131,15 @@ body{
         margin-right: 200px;
     }
 }
+form{
+    padding-top: 0;
+    width: 850px;
+    padding: 20px;
+    margin: 8% auto 0;
+    border-style: groove;
+    border-radius: 20px;
+    background-color: white;
+}
 table{
     width: 750px;
     border-spacing: 20px;

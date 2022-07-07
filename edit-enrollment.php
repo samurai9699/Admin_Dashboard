@@ -4,6 +4,10 @@
     while ($fetchstudent= mysqli_fetch_array($querystudent))
     {
         $fullname= $fetchstudent['fullname'];
+        $phonenumber=$fetchstudent['phonenumber'];
+        $email=$fetchstudent['email'];
+        $gender=$fetchstudent['gender'];
+        $course=$fetchstudent['course'];
     }
 ?>
 
@@ -36,9 +40,93 @@
                     </div>
                 </div>
             </div>
-       </div>
-</div>
+          </div>
+      
+         <div class="card-body"> 
+                   <form>
+                       <div class="row">
+                     <div class="mb-3 col-lg-6">
+                        <label for="fullname" class="form-label">
+                           <b>
+                       Full Name
+                      </b>
+                    </label>
+                     <input type="text" name="fullname" class="form-control" value="<?php echo $fullname ?>" placeholder="Enter your full Name">
+                    </div>
+                     <div class="mb-3 col-lg-6">
+                               <label for="phone" class="form-label">
+                        <b>
+                    Phone Number
+                 </b>
+                  </label>
+               <input type="tel" name="phonenumber" class="form-control" value="<?php echo $phonenumber ?>" placeholder="Enter your phone number">
+                 </div>
+    
+                          <div class="mb-3 col-lg-6">
+                  <label for="email" class="form-label"3>
+                  <b>
+                  Email
+                  </b>
+               </label>
+              <input type="email" name="email" class="form-control" value="<?php echo $email ?>" placeholder="Enter your email address">
+             </div>
+               <div class="mb-3 col-lg-6">
+               <label for="gender"  class="form-label">
+                    <b>
+                    What's your gender
+                   </b>            
+              </label>
+                <select name="gender" class="form-control" id="">
+                   <option value="<?php echo $gender ?>"><?php echo $gender ?></option>
+                    <option value="--select your gender--">--select your gender--</option>
+                   <option value="male">male</option>
+                  <option value="female">female</option>
+                  <option value="rather not say">rather not say</option>
+               </select>
+        </div>
+             
+               
+        <div class="mb-3 col-lg-6">
+                <label for="course"  class="form-label">
+                   <b> 
+                    What's your preferred course?
+                </b>              
+                </label>
+                <select name="course" class="form-control" id="">
+                    <option value="<?php echo $course ?>"><?php echo $course ?></option>
+                    <option value="--select your course--"> <b>--select your course-- </b> </option>
+                    <option value="software development">Software development</option>
+                    <option value="cyber security">cyber security</option>
+                    <option value="android design">android design</option>
+                </select>
+        
+           </div>
+          
+          <br>
 
+           
+        
+                
+           <div class="mb-3 col-lg-6">
+           <button type="submit" name="submitbutton" class="btn btn-primary">Submit</button> 
+           </div> 
+ 
+<!-- 
+            <div class="row">
+            <div class="mb-3 col-lg-6">
+             <label for="email" class="form-label">
+                <b>
+                Email
+               </b>
+            </label>
+             <input type="email" name="email" class="form-control" placeholder="your email address">
+              <button type="submit" name="submitbutton" class="btn btn-primary">subscribe</button>   
+             </div>  
+            </div> 
+   -->
+   </form>
+   </div>
+</div>
 
     
     
