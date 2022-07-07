@@ -43,7 +43,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
         <br>
          <br>
-    
+<!--     
           <div class="row">
                <div class="col-lg-12">
                    <div class="card-hearder bg-dark text-white text-center">
@@ -55,7 +55,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
             </div> 
         </div>
       </div>
-   
+    -->
              <div class="card-body">
                     <table class="table table-striped table-hover table-responsive">
                         <thead>
@@ -81,7 +81,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                     <td><?php echo $fetchenrollmentrecords ['course']?></td>
                     <td><?php echo $fetchenrollmentrecords ['created_at']?></td>
                     <td>
-                             <a href =# class="btn btn-primary btn-sm">
+                             <a href ="edit-enrollment.php?id=<?php echo $fetchenrollmentrecords['no']?>" class="btn btn-primary btn-sm">
                                 <i class="fa fa-edit"></i>
                                </a>
                              <a href =# class="btn btn-info btn-sm">
@@ -106,9 +106,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
 
 
-     <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
-     <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+   <?php require_once('includes/scripts.php') ?>
  
 </body>
 </html>
