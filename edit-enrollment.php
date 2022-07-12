@@ -1,14 +1,18 @@
 <?php
+    $message="";
     require_once('logics/dbconnection.php');
     $querystudent= mysqli_query($conn,"SELECT * FROM enrollment WHERE no=' ".$_GET["id"]."' ");
     while ($fetchstudent= mysqli_fetch_array($querystudent))
     {
+        $id=$fetchstudent['no'];
         $fullname= $fetchstudent['fullname'];
         $phonenumber=$fetchstudent['phonenumber'];
         $email=$fetchstudent['email'];
         $gender=$fetchstudent['gender'];
         $course=$fetchstudent['course'];
     }
+     // updating user records
+     require_once('logics/process-update.php');
 ?>
 
 <!DOCTYPE html>
@@ -34,16 +38,20 @@
                <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                       <div class="card-header bg-dark text-center text-white">
-                          <h4>Edit Student <?php echo $fullname ?></h4>
+                      <div class="card-header bg-dark text-center text-white">
+                          <h4>
+                            Edit Student
+                           </h4>
+                             <?php echo $fullname?>
+                             <?php echo $message?>
                        </div>
                     </div>
                 </div>
             </div>
           </div>
       
-         <div class="card-body"> 
-                   <form>
+       <div class="card-body"> 
+          <form action="edit-enrollment.php?id=<?php echo $id ?>" METHOD="POST">
                        <div class="row">
                      <div class="mb-3 col-lg-6">
                         <label for="fullname" class="form-label">
@@ -82,12 +90,12 @@
                    <option value="male">male</option>
                   <option value="female">female</option>
                   <option value="rather not say">rather not say</option>
-               </select>
-        </div>
+                 </select>
+            </div>
              
                
-        <div class="mb-3 col-lg-6">
-                <label for="course"  class="form-label">
+            <div class="mb-3 col-lg-6">
+                 <label for="course"  class="form-label">
                    <b> 
                     What's your preferred course?
                 </b>              
@@ -98,33 +106,21 @@
                     <option value="software development">Software development</option>
                     <option value="cyber security">cyber security</option>
                     <option value="android design">android design</option>
-                </select>
+                 </select>
         
-           </div>
+              </div>
           
-          <br>
+            <br>
 
            
         
-                
-           <div class="mb-3 col-lg-6">
-           <button type="submit" name="submitbutton" class="btn btn-primary">Submit</button> 
-           </div> 
+               <div class="row pt-3"></div>
+                 <div class="col-lg-6">
+               <button type="submit" name="updateenrollment" class="btn btn-primary">Update</button> 
+               </div> 
+           </div>
  
-<!-- 
-            <div class="row">
-            <div class="mb-3 col-lg-6">
-             <label for="email" class="form-label">
-                <b>
-                Email
-               </b>
-            </label>
-             <input type="email" name="email" class="form-control" placeholder="your email address">
-              <button type="submit" name="submitbutton" class="btn btn-primary">subscribe</button>   
-             </div>  
-            </div> 
-   -->
-   </form>
+     </form>
    </div>
 </div>
 

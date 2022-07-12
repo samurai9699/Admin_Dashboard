@@ -36,7 +36,7 @@
 
             if($sql)
             {
-                $msg= "Data submitted successfully";
+                $msg= "SUCCESS";
             }
             else{
                 $msg= "Error";
