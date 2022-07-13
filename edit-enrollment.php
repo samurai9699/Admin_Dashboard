@@ -10,6 +10,7 @@
         $email=$fetchstudent['email'];
         $gender=$fetchstudent['gender'];
         $course=$fetchstudent['course'];
+        $created_at = $fetchstudent=['created_at'];
     }
      // updating user records
      require_once('logics/process-update.php');
@@ -39,9 +40,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                       <div class="card-header bg-dark text-center text-white">
+                        <a href="student.php" class="btn btn-primary btn-sm">back</a>
                           <h4>
                             Edit Student
                            </h4>
+                            
                              <?php echo $fullname?>
                              <?php echo $message?>
                        </div>

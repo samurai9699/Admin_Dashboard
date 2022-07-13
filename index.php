@@ -7,6 +7,7 @@ $countallstudents = mysqli_num_rows($queryenrolledstudents);
 // count by gender
 $queryenrolledfemale = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='female' ");
 $countallfemale= mysqli_num_rows($queryenrolledfemale);
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +67,7 @@ $countallfemale= mysqli_num_rows($queryenrolledfemale);
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-graduation-cap fa-3x"></i></span>
-                    <span class="float-end">00</span>
+                    <span class="float-end badge bg-dark rounded-pill"></span>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -92,7 +93,7 @@ $countallfemale= mysqli_num_rows($queryenrolledfemale);
                 </div>
             </div>
         </div>
-        </div>
+     </div>
 </div>
 
 

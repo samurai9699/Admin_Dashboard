@@ -42,20 +42,8 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
          </div>
 
         <br>
-         <br>
-<!--     
-          <div class="row">
-               <div class="col-lg-12">
-                   <div class="card-hearder bg-dark text-white text-center">
-                     <span>Student Analysis</span>
-                 </div>
-                 <div class="body shadow">
-                <span><i class="fa fa-line-chart fa-4x"></i></span>
-               </div>
-            </div> 
-        </div>
-      </div>
-    -->
+         <br> 
+         
              <div class="card-body">
                     <table class="table table-striped table-hover table-responsive" style="font-size:12px;">
                         <thead>
@@ -84,10 +72,10 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                              <a href ="edit-enrollment.php?id=<?php echo $fetchenrollmentrecords['no']?>" class="btn btn-primary btn-sm">
                                 <i class="fa fa-edit"></i>
                                </a>
-                             <a href =# class="btn btn-info btn-sm">
+                             <a href ="view-enrollment.php?id=<?php echo $fetchenrollmentrecords['no'] ?>" class="btn btn-info btn-sm">
                                <i class="fa fa-eye"></i>
                               </a>
-                               <a href =# class="btn btn-danger btn-sm">
+                               <a href ="delete-enrollment.php?id=<?php echo $fetchenrollmentrecords['no'] ?>" class="btn btn-danger btn-sm">
                              <i class="fa fa-trash"></i>
                              </a>
                     </td>
