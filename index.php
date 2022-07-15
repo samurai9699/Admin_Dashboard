@@ -1,35 +1,20 @@
+<?php
+require_once('logics/dbconnection.php');
+// counting total number of students
+$queryenrolledstudents = mysqli_query($conn,"SELECT * FROM enrollment");
+$countallstudents = mysqli_num_rows($queryenrolledstudents);
+
+// count by gender
+$queryenrolledfemale = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='female' ");
+$countallfemale= mysqli_num_rows($queryenrolledfemale);
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
+ <?php require_once('includes/headers.php')?>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
-        <div class="container-fluid">
-           <a href="#" class="navbar-brand">ZALEGO</a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
-               <span class="navbar-toggler-icon"></span>
-           </button>    
-    
-    
-           <div class="collapse navbar-collapse" id="navbardisplaynavigations">
-              <div class="navbar-nav">
-                      <img src="images/zalego.png" alt="zalego" height="30" width="30" class="rounded-circle">
-                              <a href="#" class="navbar-trigger"><span></span></a>
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="register.html" class="nav-link">Register</a>
-                <a href="login.html" class="nav-link">Login</a>
-              </div>
-            </div>
-         </div>
-    
-      </nav> 
+            <!-- start navigation bar here -->
+            <?php include("includes/navbar.php")?>
             <!-- end navigation bar here -->
 
     <div class="header">
@@ -37,74 +22,52 @@
         <a href="#" class="navbar-trigger"><span></span></a>
     </div>
 
-    <div class="sidebar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-group"></i></span>
-                        <span>Students</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-folder-open"></i></span>
-                        <span>Courses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-graduation-cap"></i></span>
-                        <span>Campus</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+<div class="sidebar">
+        <?php include("includes/sidebar.php")?>
 
-    </div>
+</div>
 
-    <div class="main-content">
-
-    
+<div class="main-content pt-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-hearder bg-dark text-white text-center">
                     <span>Top content</span>
-                </div>
-                <div class="card-body"> </div>
-                <div class="card-footer"></div>
+                 
+                  </div>
+                 <div class="card-body"> </div>
+                 <div class="card-footer"></div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="card-hearder bg-dark text-white text-center">
-                    <span>Students</span>
-                </div>
-                <div class="card-body">
+           <div class="row">
+                <div class="col-lg-3">
+                  <div class="card-hearder bg-dark text-white text-center">
+                      <span>Students</span>
+                  </div>
+                  <div class="card-body">
                     <span><i class="fa fa-group fa-3x"></i></span>
-                    <span class="float-end">00</span>
-                </div>
-                <div class="card-footer"></div>
-            </div>
+                     <span class="float-end badge bg-dark rounded-pill"><?php echo $countallstudents ?></span>
+                 </div>
+                 <div class="card-footer"></div>
+              </div>
+              <div class="col-lg-3">
+                   <div class="card-hearder bg-dark text-white text-center">
+                      <span>Available Courses</span>
+                  </div>
+                   <div class="card-body">
+                      <span><i class="fa fa-folder-open fa-3x"></i></span>
+                       <span class="float-end badge bg-dark rounded-pill"><?php echo $countallfemale ?></span>
+                    </div>
+                   <div class="card-footer"></div>
+              </div>
             <div class="col-lg-3">
                 <div class="card-hearder bg-dark text-white text-center">
-                    <span>Available Courses</span>
-                </div>
-                <div class="card-body">
-                    <span><i class="fa fa-folder-open fa-3x"></i></span>
-                    <span class="float-end">00</span>
-                </div>
-                <div class="card-footer"></div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card-hearder bg-dark text-white text-center">
-                    <span>Compuses</span>
+                    <span>Campuses</span>
                 </div>
                 <div class="card-body">
                     <span><i class="fa fa-graduation-cap fa-3x"></i></span>
-                    <span class="float-end">00</span>
+                    <span class="float-end badge bg-dark rounded-pill"></span>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -117,9 +80,9 @@
                     <span class="float-end">00</span>
                 </div>
                 <div class="card-footer"></div>
-            </div>
-        </div>
-        <br>
+               </div>
+              </div>
+            <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-hearder bg-dark text-white text-center">
@@ -130,13 +93,12 @@
                 </div>
             </div>
         </div>
-        </div>
-    </div>
-    
-    
-    <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
-    <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+     </div>
+</div>
 
+
+    
+    
+    <?php require_once('includes/scripts.php') ?>
 </body>
 </html>
