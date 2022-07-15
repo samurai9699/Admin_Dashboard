@@ -6,6 +6,9 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once('includes/headers.php')?>
@@ -58,7 +61,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
            <tbody>  
             <?php while ($fetchenrollmentrecords= mysqli_fetch_array($sql)) {?>
                 <tr>
-                    <td><?php echo $fetchenrollmentrecords ['no']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['no']?></td
                     <td><?php echo $fetchenrollmentrecords ['fullname']?></td>
                     <td><?php echo $fetchenrollmentrecords ['phonenumber']?></td>
                     <td><?php echo $fetchenrollmentrecords ['email']?></td>

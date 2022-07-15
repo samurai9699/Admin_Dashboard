@@ -5,6 +5,7 @@ body{
     margin: 0;
     padding: 0;
 }
+ 
 .header{
     position:absolute;
     width: 100%;
@@ -12,10 +13,11 @@ body{
     height: 50px;
     z-index: 5;
 }
+ 
 .sidebar{
     position: absolute;
     width: 100%;
-    background-color:#7cf242;
+    background-color:#07b00d;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;
@@ -127,6 +129,15 @@ body{
         margin-left: 200px;
         margin-right: 200px;
     }
+}
+form{
+    padding-top: 0;
+    width: 850px;
+    padding: 20px;
+    margin: 8% auto 0;
+    border-style: groove;
+    border-radius: 20px;
+    background-color: white;
 }
 table{
     width: 750px;
