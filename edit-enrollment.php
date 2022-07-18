@@ -45,8 +45,8 @@
                             Edit Student
                            </h4>
                             
-                             <?php echo $fullname?>
-                             <?php echo $message?>
+                             <?php echo $fullname ?>
+                             <?php echo $course ?>
                        </div>
                     </div>
                 </div>
