@@ -11,7 +11,13 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
 
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once('includes/headers.php')?>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hi.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+     <title>ZALEGO</title>
 <body>
     <!-- start navigation bar here -->
          <?php include("includes/navbar.php")?>
@@ -25,8 +31,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
     <div class="sidebar">
     <?php include("includes/sidebar.php")?>
     </div>
-
-
+   
  <div class="main-content">
         <div class="container-fluid">
             <div class="row">
@@ -34,10 +39,10 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                     <div class="card-hearder bg-dark text-white text-center">
                         <span><i class="fa fa-group"></i></span>
                         <h4>
-                        <a href="add-student.php" class="btn btn-primary btn-sm float-end">
-                            +
-                        </a>
-                         
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        +
+                                    </button>
+
                                     <h4>
                             Students
                        </h4>
@@ -97,10 +102,13 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
           
             <div class="card-footer">
       </div>
+      
 </div>
 
 
-
+<?php
+   require_once('add-student.php');
+   ?>
 
    <?php require_once('includes/scripts.php') ?>
  

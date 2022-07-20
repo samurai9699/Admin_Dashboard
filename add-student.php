@@ -38,38 +38,7 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="hi.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-     <title>ZALEGO</title>
-</head>
-<body>
-    <!-- start navigation bar here -->
-         <?php include("includes/navbar.php")?>
-    <!-- end navigation bar here -->
-
-    <div class="header">
-        <img src="images/zalego.png" alt="zalego" height="50" width="50" class="rounded-circle">
-        <a href="#" class="navbar-trigger"><span></span></a>
-    </div>
-
-    <div class="sidebar">
-    <?php include("includes/sidebar.php")?>
-    </div>
-
-
- <div class="main-content">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Launch demo modal
-                                    </button>
-
+       
    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog">
