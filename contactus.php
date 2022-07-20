@@ -57,7 +57,9 @@ $sql = mysqli_query($conn,"SELECT * FROM contactus");
                     </tr>
               </thead>
            <tbody>  
-            <?php while ($fetchcontactusrecords= mysqli_fetch_array($sql)) {?>
+            <?php
+                $count = 1;
+             while ($fetchcontactusrecords= mysqli_fetch_array($sql)) {?>
                 <tr>
                     <td><?php echo $fetchcontactusrecords ['no']?></td>
                     <td><?php echo $fetchcontactusrecords ['firstname']?></td>
@@ -78,7 +80,7 @@ $sql = mysqli_query($conn,"SELECT * FROM contactus");
                              </a>
                     </td>
                 </tr>
-            <?php }?>
+            <?php $count++; }?>
                 
 
             </table>

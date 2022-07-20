@@ -39,8 +39,9 @@
                 <div class="col-lg-12">
                     <div class="card">
                       <div class="card-header bg-dark text-center text-white">
-                        <a href="student.php" class="btn btn-primary btn-sm">back</a>
                           <h4>
+                          <a href="contactus.php" class="btn btn-warning btn-sm float-start">back</a>
+                          
                             Edit user
                            </h4>
                             

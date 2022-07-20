@@ -40,7 +40,8 @@
                 <div class="col-lg-12">
                     <div class="card">
                       <div class="card-header bg-dark text-center text-white">
-                        <a href="student.php" class="btn btn-primary btn-sm">back</a>
+                        <a href="student.php" class="btn btn-primary btn-sm float-start">back</a>
+                     
                           <h4>
                             Edit Student
                            </h4>

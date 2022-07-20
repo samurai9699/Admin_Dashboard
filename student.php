@@ -33,7 +33,14 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                 <div class="col-lg-12">
                     <div class="card-hearder bg-dark text-white text-center">
                         <span><i class="fa fa-group"></i></span>
-                        <span>Students</span>
+                        <h4>
+                        <a href="add-student.php" class="btn btn-primary btn-sm float-end">
+                            +
+                        </a>
+                         
+                                    <h4>
+                            Students
+                       </h4>
                     </div>
                     <div class="card-body"> </div>
                     <div class="card-footer"></div>
@@ -48,25 +55,25 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                     <table class="table table-striped table-hover table-responsive" style="font-size:12px;">
                         <thead>
                         <tr>
-                             <th>ID</th>
-                                  <th>Fullname:</th>
+                                     <th>ID</th>
+                                     <th>Fullname:</th>
                                      <th>Phone</th>
                                      <th>Email</th>
                                      <th>Course</th>
-                                       <th>Gender</th>
-                                          <th>Enrolled on</th>
-                                        <th>Action</th>
+                                     <th>Gender</th>
+                                      <th>Enrolled on</th>
+                                      <th>Action</th>
                     </tr>
               </thead>
            <tbody>  
             <?php while ($fetchenrollmentrecords= mysqli_fetch_array($sql)) {?>
                 <tr>
-                    <td><?php echo $fetchenrollmentrecords ['no']?></td
+                    <td><?php echo $fetchenrollmentrecords ['no']?></td>
                     <td><?php echo $fetchenrollmentrecords ['fullname']?></td>
                     <td><?php echo $fetchenrollmentrecords ['phonenumber']?></td>
                     <td><?php echo $fetchenrollmentrecords ['email']?></td>
-                    <td><?php echo $fetchenrollmentrecords ['gender']?></td>
                     <td><?php echo $fetchenrollmentrecords ['course']?></td>
+                    <td><?php echo $fetchenrollmentrecords ['gender']?></td>
                     <td><?php echo $fetchenrollmentrecords ['created_at']?></td>
                     <td>
                              <a href ="edit-enrollment.php?id=<?php echo $fetchenrollmentrecords['no']?>" class="btn btn-primary btn-sm">
@@ -78,6 +85,7 @@ $sql = mysqli_query($conn,"SELECT * FROM enrollment");
                                <a href ="delete-enrollment.php?id=<?php echo $fetchenrollmentrecords['no'] ?>" class="btn btn-danger btn-sm">
                              <i class="fa fa-trash"></i>
                              </a>
+                             
                     </td>
                 
                 
