@@ -1,16 +1,12 @@
 <?php
 // database connecion
  require_once('logics/dbconnection.php');
- $sqlfetchsubscriber = mysqli_query($conn,
+ $sqlfetchpatron = mysqli_query($conn,
  "SELECT * FROM subscribers WHERE no=' ".$_GET["id"]."' ");
- while($sqlfetchsubscriber= mysqli_fetch_array($sqlfetchsubscriber))
- {
-    
-    $email=$fetchuser['email'];
-   
-     
-    $created_at = $fetchuser['created_at'];
-          
+ while($fetchpatron= mysqli_fetch_array($sqlfetchpatron))
+ { 
+    $email= $fetchpatron['email'];
+    $created_at = $fetchpatron['created_at'];     
  }
 ?>
 <!DOCTYPE html>

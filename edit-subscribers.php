@@ -1,12 +1,12 @@
 <?php
     $message="";
     require_once('logics/dbconnection.php');
-    $querysubscriber= mysqli_query($conn,"SELECT * FROM subscribers WHERE no=' ".$_GET["id"]."' ");
-    while ($fetchsubscriber= mysqli_fetch_array($querysubscriber))
+    $querypatron= mysqli_query($conn,"SELECT * FROM subscribers WHERE no=' ".$_GET["id"]."' ");
+    while ($fetchpatron= mysqli_fetch_array($querypatron))
     {
-        $id=$fetchsubscriber['no'];
-        $email=$fetchsubscriber['email'];
-        $created_at = $fetchsubscriber['created_at'];
+        $id=$fetchpatron['no'];
+        $email=$fetchpatron['email'];
+        $created_at = $fetchpatron['created_at'];
     }
      // updating user records
     require_once('logics/contact-update.php');
